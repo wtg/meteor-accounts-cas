@@ -69,7 +69,7 @@ var casTicket = function (req, token, callback) {
     } else {
       if (status) {
         console.log("accounts-cas: user validated " + username);
-        _casCredentialTokens[token] = { id: username };
+        _casCredentialTokens[token] = { id: username.toLowerCase() };
       } else {
         console.log("accounts-cas: unable to validate " + ticketId);
       }
